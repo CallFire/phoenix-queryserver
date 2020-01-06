@@ -24,14 +24,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-      <groupId>org.apache</groupId>
-      <artifactId>apache</artifactId>
-      <version>21</version>
+        <groupId>com.cloudera.cdh</groupId>
+        <artifactId>cdh-root</artifactId>
+        <version>6.1.1</version>
     </parent>
 
     <groupId>org.apache.phoenix</groupId>
     <artifactId>phoenix-queryserver</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>5.1.0-cdh6.1.1-cf</version>
     <packaging>pom</packaging>
     <name>Phoenix Query Server</name>
 
@@ -68,10 +68,28 @@
         <top.dir>${project.basedir}</top.dir>
 
         <!-- Hadoop Versions -->
-        <hbase.version>1.4.10</hbase.version>
-        <hadoop-two.version>2.7.5</hadoop-two.version>
+        <hbase.version>${cdh.hbase.version}</hbase.version>
+        <hadoop-two.version>${cdh.hadoop.version}</hadoop-two.version>
+
+        <!-- Dependency versions -->
+        <cdh.version.number>6.1.1</cdh.version.number>
+        <cdh.version>cdh${cdh.version.number}</cdh.version>
+        <commons-cli.version>${cdh.commons-cli.version}</commons-cli.version>
+        <hive.version>${cdh.hive.version}</hive.version>
+        <hadoop.version>${cdh.hadoop.version}</hadoop.version>
+        <pig.version>${cdh.pig.version}</pig.version>
+        <jackson.version>${cdh.jackson.version}</jackson.version>
+        <antlr.version>${cdh.antlr.version}</antlr.version>
+        <log4j.version>${cdh.log4j.version}</log4j.version>
+        <disruptor.version>3.3.6</disruptor.version>
+        <slf4j.version>${cdh.slf4j.version}</slf4j.version>
+        <protobuf-java.version>${cdh.protobuf.version}</protobuf-java.version>
+        <commons-io.version>${cdh.commons-io.version}</commons-io.version>
+        <commons-lang.version>${cdh.commons-lang3.version}</commons-lang.version>
+        <commons-logging.version>${cdh.commons-logging.version}</commons-logging.version>
+
         <curator.version>2.12.0</curator.version>
-        <phoenix.version>4.14.2-HBase-1.4</phoenix.version>
+        <phoenix.version>${project.version}</phoenix.version>
 
         <!-- Dependency versions -->
         <sqlline.version>1.2.0</sqlline.version>

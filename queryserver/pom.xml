@@ -28,7 +28,7 @@
   <parent>
     <groupId>org.apache.phoenix</groupId>
     <artifactId>phoenix-queryserver</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>5.1.0-cdh6.1.1-cf</version>
   </parent>
 
   <artifactId>queryserver</artifactId>
@@ -53,9 +53,6 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <skipIfEmpty>true</skipIfEmpty>
-        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
@@ -85,7 +82,7 @@
             </goals>
             <configuration>
               <finalName>phoenix-${project.version}-queryserver</finalName>
-              <shadedArtifactAttached>false</shadedArtifactAttached>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
               <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
               <shadeTestJar>false</shadeTestJar>
               <transformers>
